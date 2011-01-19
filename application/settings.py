@@ -29,11 +29,13 @@ USE_I18N = False
 DEFAULT_LANG = 'en'
 
 INSTALLED_APPS = (
-  "home"
+  "home",
+  "gtug0"
 )
 
 APP_MOUNT_POINTS = {
-  "home": "/"
+  "home": "/",
+  "gtug0": "/gtug0",
 }
 
 # You can remove following settings if unnecessary.

@@ -29,9 +29,11 @@ USE_I18N = False
 DEFAULT_LANG = 'en'
 
 INSTALLED_APPS = (
+  "home"
 )
 
 APP_MOUNT_POINTS = {
+  "home": "/"
 }
 
 # You can remove following settings if unnecessary.

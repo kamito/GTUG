@@ -1,1 +1,1 @@
-/www/kamito/GTUG/kay/manage.py
+../kay/manage.py

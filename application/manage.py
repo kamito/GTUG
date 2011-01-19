@@ -1,0 +1,1 @@
+/www/kamito/GTUG/kay/manage.py

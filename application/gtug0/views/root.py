@@ -31,4 +31,4 @@ from kay.utils import render_to_response
 # Create your views here.
 
 def index(request):
-  return render_to_response('gtug0/index.html', {'message': 'Hello'})
+  return render_to_response('gtug0/root/index.html', {})

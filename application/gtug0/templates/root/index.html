@@ -1,7 +1,17 @@
 {% extends "home/base.html" %}
-{% block title %}CLOMO GATE{% endblock %}
 {% block content %}
 
-<h1>GTUG <b>0</b></h1>
+<h1>GTUG #0</h1>
+<form action="{{ url_for('gtug0/update') }}" method="POST" onsubmit="return false;">
+<input type="text" name="message" value="" />
+<input type="submit" value="Send" />
+</form>
 
+<div id="messages"></div>
+
+{% endblock %}
+{% block page_scripts %}
+<script src="/_ah/channel/jsapi"></script>
+<script type="text/javascript" src="{{ media_url }}/js/gtug0.js"></script>
+<script type="text/javascript">window.channel_token="{{ token }}";</script>
 {% endblock %}

@@ -3,9 +3,10 @@
 gtug0.views
 """
 
-"""
 import logging
+import base64
 
+from google.appengine.api import channel
 from google.appengine.api import users
 from google.appengine.api import memcache
 from werkzeug import (
@@ -23,12 +24,18 @@ from kay.utils import (
 from kay.i18n import gettext as _
 from kay.auth.decorators import login_required
 
-"""
-
-from kay.utils import render_to_response
 
 
 # Create your views here.
 
+@login_required
 def index(request):
-  return render_to_response('gtug0/root/index.html', {})
+  client_id = base64.b64encode(request.user.email)
+  token = channel.create_channel(client_id)
+  template_value = {
+    "token": token
+    }
+  return render_to_response('gtug0/root/index.html', template_value)
+
+def update(request):
+  pass

@@ -1,0 +1,26 @@
+/* static.css */
+
+a {
+    color:#00C; text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+
+/* List icon */
+.l0 {
+    background-repeat:no-repeat; background-position:left center; padding-left:20px;
+}
+.l1 { background-image:url("../img/list/l1.png");  }
+.l2 { background-image:url("../img/list/l2.png");  }
+.l3 { background-image:url("../img/list/l3.png");  }
+.l4 { background-image:url("../img/list/l4.png");  }
+.l5 { background-image:url("../img/list/l5.png");  }
+
+
+/* Copyright */
+div#copyright {
+    position:fixed; bottom:10px; right:10px;
+    color:#CCCCCC;
+}

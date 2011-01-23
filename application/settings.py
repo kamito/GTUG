@@ -9,6 +9,17 @@ A sample of kay settings.
 :license: BSD, see LICENSE for more details.
 """
 
+import os, sys, logging
+
+## append load-path
+append_load_paths = [
+  'lib',
+  ]
+root_path = script_dir = os.path.dirname(os.path.abspath(__file__))
+for path in append_load_paths:
+  sys.path.append(os.path.join(root_path, path))
+
+
 DEFAULT_TIMEZONE = 'Asia/Tokyo'
 DEBUG = True
 PROFILE = False

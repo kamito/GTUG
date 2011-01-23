@@ -3,14 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Kamito GTUG</title>
-<link rel="stylesheet" type="text/css" href="{{ media_url }}/css/static.css" />
+{% block closure_styles %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="{{ media_url }}/app/gtug.css" />
 {% block page_styles %}{% endblock %}
 </head>
 <body>
 {% block content %}{% endblock %}
 <div id="copyright">&copy;2010&nbsp;kmt.bz</div>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="{{ media_url }}/closure-library/closure/goog/base.js"></script>
+<script type="text/javascript" src="{{ media_url }}/closure/goog/base.js"></script>
+<script type="text/javascript" src="{{ media_url }}/gtug-deps.js"></script>
 {% block page_scripts %}{% endblock %}
 </body>
 </html>

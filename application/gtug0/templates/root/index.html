@@ -1,17 +1,33 @@
 {% extends "home/base.html" %}
 {% block content %}
 
+<div style="position:absolute;top:10px;right:10px;">
+  <span>{{ request.user }}</span>
+  <a href="{{ create_logout_url() }}">Logout</a>
+</div>
+
 <h1>GTUG #0</h1>
-<form action="{{ url_for('gtug0/update') }}" method="POST" onsubmit="return false;">
-<input type="text" name="message" value="" />
-<input type="submit" value="Send" />
+<form action="{{ url_for('gtug0/update') }}" method="POST" onsubmit="return false;" id="form">
+<input type="text" name="message" value="" style="width:600px;padding:4px;" id="message_field" />
+<div id="buttons" style="display:inline-block"></div>
 </form>
 
-<div id="messages"></div>
+<div>
+  <table>
+    <tbody id="messages">
+    </tbody>
+  </table>
+</div>
 
+{% endblock %}
+{% block closure_styles %}
+<link rel="stylesheet" type="text/css" href="{{ media_url }}/closure/goog/css/common.css" />
+<link rel="stylesheet" type="text/css" href="{{ media_url }}/closure/goog/css/css3button.css" />
 {% endblock %}
 {% block page_scripts %}
 <script src="/_ah/channel/jsapi"></script>
-<script type="text/javascript" src="{{ media_url }}/js/gtug0.js"></script>
 <script type="text/javascript">window.channel_token="{{ token }}";</script>
+<script type="text/javascript">
+goog.require("Gtug.Gtug0");
+</script>
 {% endblock %}

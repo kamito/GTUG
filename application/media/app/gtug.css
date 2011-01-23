@@ -1,4 +1,10 @@
-/* static.css */
+/* GTUG */
+
+
+body {
+    margin:40px; padding:0px;
+    font-size:12px; font-weight:normal; font-family:Arial, sans-serif;
+}
 
 a {
     color:#00C; text-decoration:none;
@@ -6,6 +12,13 @@ a {
 a:hover {
     text-decoration:underline;
 }
+
+input[type=text], input[type=password] {
+    border:1px solid #CCCCCC; padding:2px;
+}
+
+
+
 
 
 /* List icon */

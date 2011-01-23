@@ -24,7 +24,7 @@ from kay.routing import (
 
 view_groups = [
   ViewGroup(
-    Rule('/update', endpoint='update', view='gtug0.views.root.update'),
+    Rule('/update', endpoint='update', view='gtug0.views.message.update'),
     Rule('/', endpoint='index', view='gtug0.views.root.index'),
   )
 ]
